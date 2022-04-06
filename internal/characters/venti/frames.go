@@ -27,7 +27,7 @@ func (c *char) ActionFrames(a core.ActionType, p map[string]int) (int, int) {
 		return 86, 86 //frames from keqing libf
 	case core.ActionSkill:
 		if p["hold"] == 0 {
-			return 38, 38
+			return 20, 20
 		}
 		return 65, 65
 	case core.ActionBurst:
