@@ -46,7 +46,13 @@ func NewChar(s *core.Core, p core.CharacterProfile) (core.Character, error) {
 		c.c6AddBuff()
 	}
 
+	c.InitCancelFrames()
+
 	return &c, nil
+}
+
+func (c *char) Init() {
+	c.Tmpl.Init()
 }
 
 func (c *char) ActionStam(a core.ActionType, p map[string]int) float64 {
